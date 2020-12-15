@@ -27,7 +27,7 @@ def ear_detect():
     print("[INFO] loading facial landmark predictor...")
     detector = dlib.get_frontal_face_detector()
     predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
-    print("Completed")
+    print("Loading facial landmark predictor Completed")
     # grab the indexes of the facial landmarks for the left and
     # right eye, respectively
     (lStart, lEnd) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
@@ -36,7 +36,7 @@ def ear_detect():
     ls.sort()
     for i in range(0, len(ls)-2):
         frame = ls[i]
-        print(frame)
+        # print(frame)
         path = '/content/Testimoney/Frames/'+frame
         frame = cv2.imread(path,0)
         frame = imutils.resize(frame, width=450)
