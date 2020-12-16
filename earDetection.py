@@ -26,7 +26,7 @@ def ear_detect():
     ears = []
     print("[INFO] loading facial landmark predictor...")
     detector = dlib.get_frontal_face_detector()
-    predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+    predictor = dlib.shape_predictor("/content/Testimoney/shape_predictor_68_face_landmarks.dat")
     print("Loading facial landmark predictor Completed")
     # grab the indexes of the facial landmarks for the left and
     # right eye, respectively
